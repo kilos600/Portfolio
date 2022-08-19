@@ -1,0 +1,1402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CDN_Prezentacja_KHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Kontrahenci">
+          <Key>
+            <PropertyRef Name="Knt_KntId" />
+          </Key>
+          <Property Name="Knt_KntId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Knt_PodmiotTyp" Type="smallint" />
+          <Property Name="Knt_Kod" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_GLN" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="Knt_EAN" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="Knt_KodPocztowy" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Knt_NipKraj" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Knt_NipE" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_Nip" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_Regon" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_Telefon1" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_Telefon2" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_Fax" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_URL" Type="varchar" MaxLength="254" Nullable="false" />
+          <Property Name="Knt_BNaID" Type="int" />
+          <Property Name="Knt_IBAN" Type="smallint" Nullable="false" />
+          <Property Name="Knt_OsPlec" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_OsKodPocztowy" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Knt_OsTelefon" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_OsGSM" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_Informacje" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Upust" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Knt_LimitFlag" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_LimitKredytu" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="Knt_LimitPrzeterKredytFlag" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_LimitPrzeterKredytWartosc" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="Knt_Ceny" Type="smallint" Nullable="false" />
+          <Property Name="Knt_FplID" Type="int" />
+          <Property Name="Knt_MaxZwloka" Type="smallint" Nullable="false" />
+          <Property Name="Knt_TerminPlat" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Termin" Type="smallint" Nullable="false" />
+          <Property Name="Knt_KatID" Type="int" />
+          <Property Name="Knt_BlokadaDok" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_LimitKredytuWal" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Knt_LimitKredytuWykorzystany" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="Knt_NieRozliczac" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_PodatekVat" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Finalny" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Export" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Rodzaj" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Dostawca" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Odbiorca" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Konkurencja" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Partner" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Potencjalny" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Medialny" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_MalyPod" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Rolnik" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Nieaktywny" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Chroniony" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_OdbiorcaId" Type="int" />
+          <Property Name="Knt_OpiekunTyp" Type="smallint" />
+          <Property Name="Knt_OpiekunId" Type="int" />
+          <Property Name="Knt_OpiekunKsiegTyp" Type="smallint" />
+          <Property Name="Knt_OpiekunKsiegID" Type="int" />
+          <Property Name="Knt_OpiekunKsiegDomyslny" Type="tinyint" />
+          <Property Name="Knt_OpiekunPiKTyp" Type="smallint" />
+          <Property Name="Knt_OpiekunPiKID" Type="int" />
+          <Property Name="Knt_OpiekunPiKDomyslny" Type="tinyint" />
+          <Property Name="Knt_TerminZwrotuKaucji" Type="smallint" Nullable="false" />
+          <Property Name="Knt_NaliczajPlatnosc" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_ZakazDokumentowHaMag" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_ZgodaNaEFaktury" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_TypWymiany" Type="tinyint" />
+          <Property Name="Knt_UWDId" Type="int" />
+          <Property Name="Knt_TS_Export" Type="datetime" />
+          <Property Name="Knt_ImportAppId" Type="varchar" MaxLength="5" />
+          <Property Name="Knt_ImportRowId" Type="varchar" MaxLength="36" />
+          <Property Name="Knt_OpeZalID" Type="int" />
+          <Property Name="Knt_StaZalId" Type="int" />
+          <Property Name="Knt_TS_Zal" Type="datetime" Nullable="false" />
+          <Property Name="Knt_OpeModID" Type="int" />
+          <Property Name="Knt_StaModId" Type="int" />
+          <Property Name="Knt_TS_Mod" Type="datetime" Nullable="false" />
+          <Property Name="Knt_GIDTyp" Type="smallint" />
+          <Property Name="Knt_GIDFirma" Type="int" />
+          <Property Name="Knt_GIDNumer" Type="int" />
+          <Property Name="Knt_GIDLp" Type="smallint" />
+          <Property Name="Knt_Adres2" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_Email" Type="nvarchar" MaxLength="127" Nullable="false" />
+          <Property Name="Knt_Gmina" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_Grupa" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_KodTransakcji" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Knt_KontoDost" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Knt_KontoOdb" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Knt_Kraj" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_KrajISO" Type="nvarchar" MaxLength="9" Nullable="false" />
+          <Property Name="Knt_Miasto" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_Nazwa1" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Knt_Nazwa2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Knt_Nazwa3" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Knt_NrDomu" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Knt_NrLokalu" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Knt_Opis" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Knt_OsAdres2" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Knt_OsEmail" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_OsGmina" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_OsKraj" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_OsMiasto" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_OsNazwisko" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_OsNrDomu" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Knt_OsNrLokalu" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Knt_OsPoczta" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_OsPowiat" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_OsTytul" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_OsUlica" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_OsWojewodztwo" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_Pesel" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="Knt_Poczta" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_Powiat" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_RachunekNr" Type="nvarchar" MaxLength="51" Nullable="false" />
+          <Property Name="Knt_Ulica" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_UWDEmail" Type="nvarchar" MaxLength="30" />
+          <Property Name="Knt_UWDOddzial" Type="nvarchar" MaxLength="10" />
+          <Property Name="Knt_Wojewodztwo" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_Zezwolenie" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="Knt_KatZakID" Type="int" />
+          <Property Name="Knt_KorKraj" Type="nvarchar" MaxLength="40" />
+          <Property Name="Knt_KorMiasto" Type="nvarchar" MaxLength="40" />
+          <Property Name="Knt_KorPoczta" Type="nvarchar" MaxLength="40" />
+          <Property Name="Knt_KorKodPocztowy" Type="varchar" MaxLength="10" />
+          <Property Name="Knt_KorUlica" Type="nvarchar" MaxLength="40" />
+          <Property Name="Knt_KorNrDomu" Type="nvarchar" MaxLength="10" />
+          <Property Name="Knt_KorNrLokalu" Type="nvarchar" MaxLength="10" />
+          <Property Name="Knt_FCzynnosci" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_FCzesci" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_BazaBR_GUID" Type="uniqueidentifier" />
+          <Property Name="Knt_eSklepID" Type="int" />
+          <Property Name="Knt_ZwolnionyZAkcyzy" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_PowiazanyUoV" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_NieNaliczajOdsetek" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_ESklep" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_WindykacjaSchematId" Type="int" />
+          <Property Name="Knt_WindykacjaOsobaId" Type="int" />
+          <Property Name="Knt_WindykacjaEMail" Type="nvarchar" MaxLength="127" Nullable="false" />
+          <Property Name="Knt_TelefonSms" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_WindykacjaTelefonSms" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_MetodaKasowa" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_FinalnyWegiel" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Komornik" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_KomornikOkreg" Type="nvarchar" MaxLength="256" />
+          <Property Name="Knt_KomornikMiasto" Type="nvarchar" MaxLength="40" />
+          <Property Name="Knt_KomornikRewir" Type="nvarchar" MaxLength="256" />
+          <Property Name="Knt_NadID" Type="int" />
+          <Property Name="Knt_Waluta" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Knt_Algorytm" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_NieUwzglVATZD" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_GlID" Type="int" />
+          <Property Name="Knt_LoginComarchCloud" Type="nvarchar" MaxLength="256" />
+          <Property Name="Knt_CJBTyp" Type="smallint" />
+          <Property Name="Knt_CJBId" Type="int" />
+          <Property Name="Knt_OpeModKod" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_OpeModNazwisko" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Knt_OpeZalKod" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Knt_OpeZalNazwisko" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Knt_OpiekunDomyslny" Type="tinyint" />
+          <Property Name="Knt_LpAnonimizacji" Type="int" Nullable="false" />
+          <Property Name="Knt_DataAnonimizacji" Type="datetime" />
+          <Property Name="Knt_SplitPay" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_Domena" Type="nvarchar" MaxLength="127" Nullable="false" />
+          <Property Name="Knt_DokumentTozsamosci" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Knt_UmowaWegiel" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_IdSisc" Type="varchar" MaxLength="17" Nullable="false" />
+          <Property Name="Knt_eSklepZrodlo" Type="smallint" Nullable="false" />
+          <Property Name="Knt_RachunekNr0" Type="nvarchar" MaxLength="51" StoreGeneratedPattern="Computed" />
+          <Property Name="Knt_AwfZgoda" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_AwfMonit" Type="int" Nullable="false" />
+          <Property Name="Knt_NieNaliczajOplataCukrowa" Type="tinyint" Nullable="false" />
+          <Property Name="Knt_NipPelny" Type="nvarchar" MaxLength="22" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TraNag">
+          <Key>
+            <PropertyRef Name="TrN_TrNID" />
+          </Key>
+          <Property Name="TrN_TrNID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TrN_RelTrNId" Type="int" />
+          <Property Name="TrN_FVMarza" Type="tinyint" />
+          <Property Name="TrN_DDfId" Type="int" />
+          <Property Name="TrN_TypDokumentu" Type="int" Nullable="false" />
+          <Property Name="TrN_ZwrId" Type="int" />
+          <Property Name="TrN_FaId" Type="int" />
+          <Property Name="TrN_NumerNr" Type="int" Nullable="false" />
+          <Property Name="TrN_NumerString" Type="varchar" MaxLength="31" Nullable="false" />
+          <Property Name="TrN_Bufor" Type="smallint" Nullable="false" />
+          <Property Name="TrN_Anulowany" Type="int" Nullable="false" />
+          <Property Name="TrN_VaNId" Type="int" />
+          <Property Name="TrN_DataDok" Type="datetime" Nullable="false" />
+          <Property Name="TrN_DataWys" Type="datetime" Nullable="false" />
+          <Property Name="TrN_DataOpe" Type="datetime" Nullable="false" />
+          <Property Name="TrN_NumerObcy" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="TrN_DataKur" Type="datetime" Nullable="false" />
+          <Property Name="TrN_NumerPelnyPrw" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="TrN_TaxFreePotwierdzony" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_Korekta" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_Fiskalna" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_FiskalnaErr" Type="int" />
+          <Property Name="TrN_StatusInt" Type="int" Nullable="false" />
+          <Property Name="TrN_RabatPromocyjny" Type="decimal" Precision="11" Scale="4" />
+          <Property Name="TrN_RabatKorekta" Type="decimal" Precision="11" Scale="4" />
+          <Property Name="TrN_Detal" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_Rodzaj" Type="int" Nullable="false" />
+          <Property Name="TrN_PodmiotTyp" Type="smallint" />
+          <Property Name="TrN_PodID" Type="int" />
+          <Property Name="TrN_PodKodPocztowy" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TrN_PodNipKraj" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="TrN_PodNipE" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TrN_PodmiotGLN" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="TrN_Finalny" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_Export" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_OdbiorcaTyp" Type="smallint" />
+          <Property Name="TrN_OdbID" Type="int" />
+          <Property Name="TrN_OdbKodPocztowy" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="TrN_OdbNipKraj" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="TrN_OdbNipE" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TrN_OdbiorcaGLN" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="TrN_OdbiorcaDocTyp" Type="smallint" />
+          <Property Name="TrN_OdbDocID" Type="int" />
+          <Property Name="TrN_OdbTelefon" Type="varchar" MaxLength="20" />
+          <Property Name="TrN_KatID" Type="int" />
+          <Property Name="TrN_Kategoria" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_FPlId" Type="int" />
+          <Property Name="TrN_Termin" Type="datetime" Nullable="false" />
+          <Property Name="TrN_TerminZwrotuKaucji" Type="datetime" />
+          <Property Name="TrN_RazemNetto" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemVAT" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemBrutto" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemNettoWal" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemVATWal" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemBruttoWal" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_Waluta" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="TrN_KursNumer" Type="int" Nullable="false" />
+          <Property Name="TrN_KursL" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+          <Property Name="TrN_KursM" Type="decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="TrN_PlatElemWalSys" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_VatDlaDokWal" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_PlatKaucje" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_PodmiotZalTyp" Type="smallint" />
+          <Property Name="TrN_PodZalId" Type="int" />
+          <Property Name="TrN_BlokadaPlatnosci" Type="smallint" Nullable="false" />
+          <Property Name="TrN_MagZrdId" Type="int" />
+          <Property Name="TrN_MagDocId" Type="int" />
+          <Property Name="TrN_TypNB" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_Rabat" Type="decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="TrN_ZwroconoCalaIlosc" Type="tinyint" />
+          <Property Name="TrN_TrSTyp" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_DekId" Type="int" />
+          <Property Name="TrN_TS_Export" Type="datetime" />
+          <Property Name="TrN_ImportAppId" Type="varchar" MaxLength="5" />
+          <Property Name="TrN_ImportRowId" Type="varchar" MaxLength="36" />
+          <Property Name="TrN_OpeZalID" Type="int" />
+          <Property Name="TrN_StaZalId" Type="int" />
+          <Property Name="TrN_TS_Zal" Type="datetime" Nullable="false" />
+          <Property Name="TrN_OpeModID" Type="int" />
+          <Property Name="TrN_StaModId" Type="int" />
+          <Property Name="TrN_TS_Mod" Type="datetime" Nullable="false" />
+          <Property Name="TrN_GIDTyp" Type="smallint" />
+          <Property Name="TrN_GIDFirma" Type="int" />
+          <Property Name="TrN_GIDNumer" Type="int" />
+          <Property Name="TrN_GIDLp" Type="smallint" />
+          <Property Name="TrN_OFFPrawoDoFAPA" Type="tinyint" />
+          <Property Name="TrN_OFFPrawoDoAnulowania" Type="tinyint" />
+          <Property Name="TrN_OFFExportMag" Type="tinyint" />
+          <Property Name="TrN_Centrala" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_IsNId" Type="int" />
+          <Property Name="TrN_DataTransportu" Type="datetime" />
+          <Property Name="TrN_DabId" Type="int" />
+          <Property Name="TrN_DataEFaktura" Type="datetime" />
+          <Property Name="TrN_EFakturaGUID" Type="varchar" MaxLength="36" />
+          <Property Name="TrN_DataPtwTaxFree" Type="datetime" />
+          <Property Name="TrN_KodKraju" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="TrN_KodTransakcji" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="TrN_NotaKorPo" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="TrN_NotaKorPrzed" Type="nvarchar" MaxLength="254" Nullable="false" />
+          <Property Name="TrN_OdbAdres2" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_OdbEmail" Type="nvarchar" MaxLength="127" />
+          <Property Name="TrN_OdbGmina" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_OdbKraj" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_OdbMiasto" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_OdbNazwa1" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_OdbNazwa2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_OdbNazwa3" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="TrN_OdbNrDomu" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TrN_OdbNrLokalu" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TrN_OdbPoczta" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_OdbPowiat" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_OdbUlica" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_OdbWojewodztwo" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_Odebral" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_OpeWysylajacy" Type="nvarchar" MaxLength="60" />
+          <Property Name="TrN_Opis" Type="nvarchar" MaxLength="1024" Nullable="false" />
+          <Property Name="TrN_PodAdres2" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_PodGmina" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_PodKraj" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_PodMiasto" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_PodNazwa1" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_PodNazwa2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_PodNazwa3" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="TrN_PodNrDomu" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TrN_PodNrLokalu" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="TrN_PodPoczta" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_PodPowiat" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_PodUlica" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_PodWojewodztwo" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="TrN_NumerPelny" Type="nvarchar" MaxLength="30" StoreGeneratedPattern="Computed" />
+          <Property Name="TrN_StatusString" Type="nvarchar" MaxLength="10" StoreGeneratedPattern="Computed" />
+          <Property Name="TrN_PreDekID" Type="int" />
+          <Property Name="TrN_ZwrIdWZKK" Type="int" />
+          <Property Name="TrN_TrybNettoVAT" Type="int" Nullable="false" />
+          <Property Name="TrN_eSklepID" Type="int" />
+          <Property Name="TrN_NieOkreslonaWartoscKor" Type="int" />
+          <Property Name="TrN_ZwolnionyZAkcyzy" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_AkcyzaMiejsceOdbioru" Type="nvarchar" MaxLength="200" />
+          <Property Name="TrN_AkcyzaMiejsceWydania" Type="nvarchar" MaxLength="200" />
+          <Property Name="TrN_AkcyzaDataRozpoczeciaPrzem" Type="datetime" />
+          <Property Name="TrN_AkcyzaDataOdbioruOd" Type="datetime" />
+          <Property Name="TrN_AkcyzaDataOdbioruDo" Type="datetime" />
+          <Property Name="TrN_FADokumentDostawy" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_NrListuPrzewozowego" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="TrN_Srw" Type="smallint" />
+          <Property Name="TrN_PodatekVat" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_Pesel" Type="nvarchar" MaxLength="11" Nullable="false" />
+          <Property Name="TrN_FVMarzaRodzaj" Type="tinyint" />
+          <Property Name="TrN_RabatWartosc" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_PARodzajKor" Type="int" Nullable="false" />
+          <Property Name="TrN_MetodaKasowa" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_FinalnyWegiel" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_KorektaZTytulu" Type="nvarchar" MaxLength="1024" Nullable="false" />
+          <Property Name="TrN_EdycjaTabelkiVAT" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_PlatnikTyp" Type="smallint" />
+          <Property Name="TrN_PlatnikID" Type="int" />
+          <Property Name="TrN_PlatnoscNaWZ" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_BzpId" Type="int" Nullable="false" />
+          <Property Name="TrN_RezerwacjaWew" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_PAFACzesciowe" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_AktualizacjaCenyZakKor" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_StawkaNPOO" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_WartoscOO" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_AwizoId" Type="int" Nullable="false" />
+          <Property Name="TrN_DokMOSMMId" Type="int" Nullable="false" />
+          <Property Name="TrN_ZakID" Type="int" />
+          <Property Name="TrN_OpeModKod" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TrN_OpeModNazwisko" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_OpeZalKod" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TrN_OpeZalNazwisko" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_PunktyZam" Type="int" Nullable="false" />
+          <Property Name="TrN_PunktyZap" Type="int" Nullable="false" />
+          <Property Name="TrN_WartoscZakupu" Type="decimal" Precision="15" Scale="2" StoreGeneratedPattern="Computed" />
+          <Property Name="TrN_WeryfikacjaVATCzynnyData" Type="datetime" />
+          <Property Name="TrN_WeryfikacjaVATCzynnyWartosc" Type="int" />
+          <Property Name="Trn_Sent" Type="int" Nullable="false" />
+          <Property Name="TrN_eSklepZrodlo" Type="int" />
+          <Property Name="TrN_eSklepRodzajDokumentu" Type="tinyint" />
+          <Property Name="TrN_eSklepFormaPlatnosci" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepStatusPlatnosci" Type="tinyint" />
+          <Property Name="TrN_eSklepUwagiKlienta" Type="nvarchar" MaxLength="2048" />
+          <Property Name="TrN_eSklepSposobDostawyTyp" Type="smallint" />
+          <Property Name="TrN_eSklepSposobDostawyNazwa" Type="nvarchar" MaxLength="100" />
+          <Property Name="TrN_eSklepStatusDostawy" Type="smallint" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoID" Type="int" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoIDeSklep" Type="int" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoNazwa1" Type="nvarchar" MaxLength="250" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoNazwa2" Type="nvarchar" MaxLength="250" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoKrajISO" Type="nvarchar" MaxLength="2" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoWojewodztwo" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoUlica" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoNrBudynku" Type="nvarchar" MaxLength="10" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoNrLokalu" Type="nvarchar" MaxLength="10" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoMiasto" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoKodPocztowy" Type="nvarchar" MaxLength="10" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoTelefon" Type="nvarchar" MaxLength="20" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoGSM" Type="nvarchar" MaxLength="20" />
+          <Property Name="TrN_eSklepKodPaczkomatuPodst" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepPaczkomatKodPaczki" Type="nvarchar" MaxLength="30" />
+          <Property Name="TrN_eSklepPaczkomatPodstMiasto" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepPaczkomatPodstKodPocztowy" Type="nvarchar" MaxLength="10" />
+          <Property Name="TrN_eSklepPaczkomatPodstUlica" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepPaczkomatPodstUlicaNR" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepKodPaczkomatuRezerw" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepPaczkomatRezerwMiasto" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepPaczkomatRezerwKodPocztowy" Type="nvarchar" MaxLength="10" />
+          <Property Name="TrN_eSklepPaczkomatRezerwUlica" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_eSklepPaczkomatRezerwUlicaNR" Type="nvarchar" MaxLength="50" />
+          <Property Name="TrN_OpeZatwID" Type="int" />
+          <Property Name="TrN_TS_Zatw" Type="datetime" />
+          <Property Name="TrN_OpeWydrID" Type="int" />
+          <Property Name="TrN_TS_Wydr" Type="datetime" />
+          <Property Name="TrN_OpeZatwKod" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TrN_OpeZatwNazwisko" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_OpeWydrKod" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TrN_OpeWydrNazwisko" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_PCID" Type="int" />
+          <Property Name="TrN_PCJSID" Type="int" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoEmail" Type="nvarchar" MaxLength="200" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoAPI" Type="nvarchar(max)" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoSzerokosc" Type="nvarchar" MaxLength="12" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoDlugosc" Type="nvarchar" MaxLength="12" />
+          <Property Name="TrN_DokumentTozsamosci" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_UmowaWegiel" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_NrListuPrzewozowegoTypKuriera" Type="int" Nullable="false" />
+          <Property Name="TrN_SplitPay" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_WartoscSP" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_eSklepDataDost" Type="datetime" />
+          <Property Name="TrN_PlatnikRachunekLp" Type="int" Nullable="false" />
+          <Property Name="TrN_PlatnikRachunekNr" Type="nvarchar" MaxLength="51" Nullable="false" />
+          <Property Name="TrN_OpeEMailID" Type="int" />
+          <Property Name="TrN_TS_EMail" Type="datetime" />
+          <Property Name="TrN_OpeEMailKod" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="TrN_OpeEMailNazwisko" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TrN_AwfWyslano" Type="datetime" />
+          <Property Name="TrN_NieNaliczajOplataCukrowa" Type="tinyint" Nullable="false" />
+          <Property Name="TrN_RozliczamPodatekWOSS" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_KntCJB">
+          <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="0..1" />
+          <End Role="Kontrahenci1" Type="Self.Kontrahenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kontrahenci">
+              <PropertyRef Name="Knt_KntId" />
+            </Principal>
+            <Dependent Role="Kontrahenci1">
+              <PropertyRef Name="Knt_CJBId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KntOdbiorca">
+          <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="0..1" />
+          <End Role="Kontrahenci1" Type="Self.Kontrahenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kontrahenci">
+              <PropertyRef Name="Knt_KntId" />
+            </Principal>
+            <Dependent Role="Kontrahenci1">
+              <PropertyRef Name="Knt_OdbiorcaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KntParent">
+          <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="0..1" />
+          <End Role="Kontrahenci1" Type="Self.Kontrahenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kontrahenci">
+              <PropertyRef Name="Knt_KntId" />
+            </Principal>
+            <Dependent Role="Kontrahenci1">
+              <PropertyRef Name="Knt_NadID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CDN_Prezentacja_KHModelStoreContainer">
+          <EntitySet Name="Kontrahenci" EntityType="Self.Kontrahenci" Schema="CDN" store:Type="Tables" />
+          <EntitySet Name="TraNag" EntityType="Self.TraNag" Schema="CDN" store:Type="Tables" />
+          <AssociationSet Name="FK_KntCJB" Association="Self.FK_KntCJB">
+            <End Role="Kontrahenci" EntitySet="Kontrahenci" />
+            <End Role="Kontrahenci1" EntitySet="Kontrahenci" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KntOdbiorca" Association="Self.FK_KntOdbiorca">
+            <End Role="Kontrahenci" EntitySet="Kontrahenci" />
+            <End Role="Kontrahenci1" EntitySet="Kontrahenci" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KntParent" Association="Self.FK_KntParent">
+            <End Role="Kontrahenci" EntitySet="Kontrahenci" />
+            <End Role="Kontrahenci1" EntitySet="Kontrahenci" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CDN_Prezentacja_KHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Kontrahenci">
+          <Key>
+            <PropertyRef Name="Knt_KntId" />
+          </Key>
+          <Property Name="Knt_KntId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Knt_PodmiotTyp" Type="Int16" />
+          <Property Name="Knt_Kod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_GLN" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_EAN" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_KodPocztowy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_NipKraj" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_NipE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Nip" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Regon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_Telefon1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_Telefon2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_URL" Type="String" MaxLength="254" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_BNaID" Type="Int32" />
+          <Property Name="Knt_IBAN" Type="Int16" Nullable="false" />
+          <Property Name="Knt_OsPlec" Type="Byte" Nullable="false" />
+          <Property Name="Knt_OsKodPocztowy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_OsTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_OsGSM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_Informacje" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Upust" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Knt_LimitFlag" Type="Byte" Nullable="false" />
+          <Property Name="Knt_LimitKredytu" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="Knt_LimitPrzeterKredytFlag" Type="Byte" Nullable="false" />
+          <Property Name="Knt_LimitPrzeterKredytWartosc" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="Knt_Ceny" Type="Int16" Nullable="false" />
+          <Property Name="Knt_FplID" Type="Int32" />
+          <Property Name="Knt_MaxZwloka" Type="Int16" Nullable="false" />
+          <Property Name="Knt_TerminPlat" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Termin" Type="Int16" Nullable="false" />
+          <Property Name="Knt_KatID" Type="Int32" />
+          <Property Name="Knt_BlokadaDok" Type="Byte" Nullable="false" />
+          <Property Name="Knt_LimitKredytuWal" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_LimitKredytuWykorzystany" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="Knt_NieRozliczac" Type="Byte" Nullable="false" />
+          <Property Name="Knt_PodatekVat" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Finalny" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Export" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Rodzaj" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Dostawca" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Odbiorca" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Konkurencja" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Partner" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Rodzaj_Potencjalny" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Medialny" Type="Byte" Nullable="false" />
+          <Property Name="Knt_MalyPod" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Rolnik" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Nieaktywny" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Chroniony" Type="Byte" Nullable="false" />
+          <Property Name="Knt_OdbiorcaId" Type="Int32" />
+          <Property Name="Knt_OpiekunTyp" Type="Int16" />
+          <Property Name="Knt_OpiekunId" Type="Int32" />
+          <Property Name="Knt_OpiekunKsiegTyp" Type="Int16" />
+          <Property Name="Knt_OpiekunKsiegID" Type="Int32" />
+          <Property Name="Knt_OpiekunKsiegDomyslny" Type="Byte" />
+          <Property Name="Knt_OpiekunPiKTyp" Type="Int16" />
+          <Property Name="Knt_OpiekunPiKID" Type="Int32" />
+          <Property Name="Knt_OpiekunPiKDomyslny" Type="Byte" />
+          <Property Name="Knt_TerminZwrotuKaucji" Type="Int16" Nullable="false" />
+          <Property Name="Knt_NaliczajPlatnosc" Type="Byte" Nullable="false" />
+          <Property Name="Knt_ZakazDokumentowHaMag" Type="Byte" Nullable="false" />
+          <Property Name="Knt_ZgodaNaEFaktury" Type="Byte" Nullable="false" />
+          <Property Name="Knt_TypWymiany" Type="Byte" />
+          <Property Name="Knt_UWDId" Type="Int32" />
+          <Property Name="Knt_TS_Export" Type="DateTime" Precision="3" />
+          <Property Name="Knt_ImportAppId" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Knt_ImportRowId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="Knt_OpeZalID" Type="Int32" />
+          <Property Name="Knt_StaZalId" Type="Int32" />
+          <Property Name="Knt_TS_Zal" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Knt_OpeModID" Type="Int32" />
+          <Property Name="Knt_StaModId" Type="Int32" />
+          <Property Name="Knt_TS_Mod" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Knt_GIDTyp" Type="Int16" />
+          <Property Name="Knt_GIDFirma" Type="Int32" />
+          <Property Name="Knt_GIDNumer" Type="Int32" />
+          <Property Name="Knt_GIDLp" Type="Int16" />
+          <Property Name="Knt_Adres2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Email" Type="String" MaxLength="127" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Gmina" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Grupa" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_KodTransakcji" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_KontoDost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_KontoOdb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Kraj" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_KrajISO" Type="String" MaxLength="9" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Miasto" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Nazwa1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Nazwa2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Nazwa3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_NrDomu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_NrLokalu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Opis" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsAdres2" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsEmail" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsGmina" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsKraj" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsMiasto" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsNazwisko" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsNrDomu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsNrLokalu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsPoczta" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsPowiat" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsTytul" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsUlica" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OsWojewodztwo" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Pesel" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Poczta" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Powiat" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_RachunekNr" Type="String" MaxLength="51" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Ulica" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_UWDEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_UWDOddzial" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_Wojewodztwo" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_Zezwolenie" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_KatZakID" Type="Int32" />
+          <Property Name="Knt_KorKraj" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_KorMiasto" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_KorPoczta" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_KorKodPocztowy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Knt_KorUlica" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_KorNrDomu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_KorNrLokalu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_FCzynnosci" Type="Byte" Nullable="false" />
+          <Property Name="Knt_FCzesci" Type="Byte" Nullable="false" />
+          <Property Name="Knt_BazaBR_GUID" Type="Guid" />
+          <Property Name="Knt_eSklepID" Type="Int32" />
+          <Property Name="Knt_ZwolnionyZAkcyzy" Type="Byte" Nullable="false" />
+          <Property Name="Knt_PowiazanyUoV" Type="Byte" Nullable="false" />
+          <Property Name="Knt_NieNaliczajOdsetek" Type="Byte" Nullable="false" />
+          <Property Name="Knt_ESklep" Type="Byte" Nullable="false" />
+          <Property Name="Knt_WindykacjaSchematId" Type="Int32" />
+          <Property Name="Knt_WindykacjaOsobaId" Type="Int32" />
+          <Property Name="Knt_WindykacjaEMail" Type="String" MaxLength="127" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_TelefonSms" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_WindykacjaTelefonSms" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_MetodaKasowa" Type="Byte" Nullable="false" />
+          <Property Name="Knt_FinalnyWegiel" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Komornik" Type="Byte" Nullable="false" />
+          <Property Name="Knt_KomornikOkreg" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_KomornikMiasto" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_KomornikRewir" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_NadID" Type="Int32" />
+          <Property Name="Knt_Waluta" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_Algorytm" Type="Byte" Nullable="false" />
+          <Property Name="Knt_NieUwzglVATZD" Type="Byte" Nullable="false" />
+          <Property Name="Knt_GlID" Type="Int32" />
+          <Property Name="Knt_LoginComarchCloud" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="Knt_CJBTyp" Type="Int16" />
+          <Property Name="Knt_CJBId" Type="Int32" />
+          <Property Name="Knt_OpeModKod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_OpeModNazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OpeZalKod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_OpeZalNazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_OpiekunDomyslny" Type="Byte" />
+          <Property Name="Knt_LpAnonimizacji" Type="Int32" Nullable="false" />
+          <Property Name="Knt_DataAnonimizacji" Type="DateTime" Precision="3" />
+          <Property Name="Knt_SplitPay" Type="Byte" Nullable="false" />
+          <Property Name="Knt_Domena" Type="String" MaxLength="127" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_DokumentTozsamosci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Knt_UmowaWegiel" Type="Byte" Nullable="false" />
+          <Property Name="Knt_IdSisc" Type="String" MaxLength="17" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Knt_eSklepZrodlo" Type="Int16" Nullable="false" />
+          <Property Name="Knt_RachunekNr0" Type="String" MaxLength="51" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Knt_AwfZgoda" Type="Byte" Nullable="false" />
+          <Property Name="Knt_AwfMonit" Type="Int32" Nullable="false" />
+          <Property Name="Knt_NieNaliczajOplataCukrowa" Type="Byte" Nullable="false" />
+          <Property Name="Knt_NipPelny" Type="String" MaxLength="22" FixedLength="false" Unicode="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="Kontrahenci1" Relationship="Self.FK_KntCJB" FromRole="Kontrahenci" ToRole="Kontrahenci1" />
+          <NavigationProperty Name="Kontrahenci2" Relationship="Self.FK_KntCJB" FromRole="Kontrahenci1" ToRole="Kontrahenci" />
+          <NavigationProperty Name="Kontrahenci11" Relationship="Self.FK_KntOdbiorca" FromRole="Kontrahenci" ToRole="Kontrahenci1" />
+          <NavigationProperty Name="Kontrahenci3" Relationship="Self.FK_KntOdbiorca" FromRole="Kontrahenci1" ToRole="Kontrahenci" />
+          <NavigationProperty Name="Kontrahenci12" Relationship="Self.FK_KntParent" FromRole="Kontrahenci" ToRole="Kontrahenci1" />
+          <NavigationProperty Name="Kontrahenci4" Relationship="Self.FK_KntParent" FromRole="Kontrahenci1" ToRole="Kontrahenci" />
+        </EntityType>
+        <EntityType Name="TraNag">
+          <Key>
+            <PropertyRef Name="TrN_TrNID" />
+          </Key>
+          <Property Name="TrN_TrNID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TrN_RelTrNId" Type="Int32" />
+          <Property Name="TrN_FVMarza" Type="Byte" />
+          <Property Name="TrN_DDfId" Type="Int32" />
+          <Property Name="TrN_TypDokumentu" Type="Int32" Nullable="false" />
+          <Property Name="TrN_ZwrId" Type="Int32" />
+          <Property Name="TrN_FaId" Type="Int32" />
+          <Property Name="TrN_NumerNr" Type="Int32" Nullable="false" />
+          <Property Name="TrN_NumerString" Type="String" MaxLength="31" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_Bufor" Type="Int16" Nullable="false" />
+          <Property Name="TrN_Anulowany" Type="Int32" Nullable="false" />
+          <Property Name="TrN_VaNId" Type="Int32" />
+          <Property Name="TrN_DataDok" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrN_DataWys" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrN_DataOpe" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrN_NumerObcy" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_DataKur" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrN_NumerPelnyPrw" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_TaxFreePotwierdzony" Type="Byte" Nullable="false" />
+          <Property Name="TrN_Korekta" Type="Byte" Nullable="false" />
+          <Property Name="TrN_Fiskalna" Type="Byte" Nullable="false" />
+          <Property Name="TrN_FiskalnaErr" Type="Int32" />
+          <Property Name="TrN_StatusInt" Type="Int32" Nullable="false" />
+          <Property Name="TrN_RabatPromocyjny" Type="Decimal" Precision="11" Scale="4" />
+          <Property Name="TrN_RabatKorekta" Type="Decimal" Precision="11" Scale="4" />
+          <Property Name="TrN_Detal" Type="Byte" Nullable="false" />
+          <Property Name="TrN_Rodzaj" Type="Int32" Nullable="false" />
+          <Property Name="TrN_PodmiotTyp" Type="Int16" />
+          <Property Name="TrN_PodID" Type="Int32" />
+          <Property Name="TrN_PodKodPocztowy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_PodNipKraj" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_PodNipE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodmiotGLN" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_Finalny" Type="Byte" Nullable="false" />
+          <Property Name="TrN_Export" Type="Byte" Nullable="false" />
+          <Property Name="TrN_OdbiorcaTyp" Type="Int16" />
+          <Property Name="TrN_OdbID" Type="Int32" />
+          <Property Name="TrN_OdbKodPocztowy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_OdbNipKraj" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_OdbNipE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbiorcaGLN" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_OdbiorcaDocTyp" Type="Int16" />
+          <Property Name="TrN_OdbDocID" Type="Int32" />
+          <Property Name="TrN_OdbTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TrN_KatID" Type="Int32" />
+          <Property Name="TrN_Kategoria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_FPlId" Type="Int32" />
+          <Property Name="TrN_Termin" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrN_TerminZwrotuKaucji" Type="DateTime" Precision="3" />
+          <Property Name="TrN_RazemNetto" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemVAT" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemBrutto" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemNettoWal" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemVATWal" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_RazemBruttoWal" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_Waluta" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_KursNumer" Type="Int32" Nullable="false" />
+          <Property Name="TrN_KursL" Type="Decimal" Precision="15" Scale="4" Nullable="false" />
+          <Property Name="TrN_KursM" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="TrN_PlatElemWalSys" Type="Byte" Nullable="false" />
+          <Property Name="TrN_VatDlaDokWal" Type="Byte" Nullable="false" />
+          <Property Name="TrN_PlatKaucje" Type="Byte" Nullable="false" />
+          <Property Name="TrN_PodmiotZalTyp" Type="Int16" />
+          <Property Name="TrN_PodZalId" Type="Int32" />
+          <Property Name="TrN_BlokadaPlatnosci" Type="Int16" Nullable="false" />
+          <Property Name="TrN_MagZrdId" Type="Int32" />
+          <Property Name="TrN_MagDocId" Type="Int32" />
+          <Property Name="TrN_TypNB" Type="Byte" Nullable="false" />
+          <Property Name="TrN_Rabat" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="TrN_ZwroconoCalaIlosc" Type="Byte" />
+          <Property Name="TrN_TrSTyp" Type="Byte" Nullable="false" />
+          <Property Name="TrN_DekId" Type="Int32" />
+          <Property Name="TrN_TS_Export" Type="DateTime" Precision="3" />
+          <Property Name="TrN_ImportAppId" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="TrN_ImportRowId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="TrN_OpeZalID" Type="Int32" />
+          <Property Name="TrN_StaZalId" Type="Int32" />
+          <Property Name="TrN_TS_Zal" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrN_OpeModID" Type="Int32" />
+          <Property Name="TrN_StaModId" Type="Int32" />
+          <Property Name="TrN_TS_Mod" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TrN_GIDTyp" Type="Int16" />
+          <Property Name="TrN_GIDFirma" Type="Int32" />
+          <Property Name="TrN_GIDNumer" Type="Int32" />
+          <Property Name="TrN_GIDLp" Type="Int16" />
+          <Property Name="TrN_OFFPrawoDoFAPA" Type="Byte" />
+          <Property Name="TrN_OFFPrawoDoAnulowania" Type="Byte" />
+          <Property Name="TrN_OFFExportMag" Type="Byte" />
+          <Property Name="TrN_Centrala" Type="Byte" Nullable="false" />
+          <Property Name="TrN_IsNId" Type="Int32" />
+          <Property Name="TrN_DataTransportu" Type="DateTime" Precision="3" />
+          <Property Name="TrN_DabId" Type="Int32" />
+          <Property Name="TrN_DataEFaktura" Type="DateTime" Precision="3" />
+          <Property Name="TrN_EFakturaGUID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+          <Property Name="TrN_DataPtwTaxFree" Type="DateTime" Precision="3" />
+          <Property Name="TrN_KodKraju" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_KodTransakcji" Type="String" MaxLength="2" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_NotaKorPo" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_NotaKorPrzed" Type="String" MaxLength="254" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbAdres2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbEmail" Type="String" MaxLength="127" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_OdbGmina" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbKraj" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbMiasto" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbNazwa1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbNazwa2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbNazwa3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbNrDomu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbNrLokalu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbPoczta" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbPowiat" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbUlica" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OdbWojewodztwo" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_Odebral" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OpeWysylajacy" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_Opis" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodAdres2" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodGmina" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodKraj" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodMiasto" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodNazwa1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodNazwa2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodNazwa3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodNrDomu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodNrLokalu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodPoczta" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodPowiat" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodUlica" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PodWojewodztwo" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_NumerPelny" Type="String" MaxLength="30" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="TrN_StatusString" Type="String" MaxLength="10" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="TrN_PreDekID" Type="Int32" />
+          <Property Name="TrN_ZwrIdWZKK" Type="Int32" />
+          <Property Name="TrN_TrybNettoVAT" Type="Int32" Nullable="false" />
+          <Property Name="TrN_eSklepID" Type="Int32" />
+          <Property Name="TrN_NieOkreslonaWartoscKor" Type="Int32" />
+          <Property Name="TrN_ZwolnionyZAkcyzy" Type="Byte" Nullable="false" />
+          <Property Name="TrN_AkcyzaMiejsceOdbioru" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_AkcyzaMiejsceWydania" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_AkcyzaDataRozpoczeciaPrzem" Type="DateTime" Precision="3" />
+          <Property Name="TrN_AkcyzaDataOdbioruOd" Type="DateTime" Precision="3" />
+          <Property Name="TrN_AkcyzaDataOdbioruDo" Type="DateTime" Precision="3" />
+          <Property Name="TrN_FADokumentDostawy" Type="Byte" Nullable="false" />
+          <Property Name="TrN_NrListuPrzewozowego" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_Srw" Type="Int16" />
+          <Property Name="TrN_PodatekVat" Type="Byte" Nullable="false" />
+          <Property Name="TrN_Pesel" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_FVMarzaRodzaj" Type="Byte" />
+          <Property Name="TrN_RabatWartosc" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_PARodzajKor" Type="Int32" Nullable="false" />
+          <Property Name="TrN_MetodaKasowa" Type="Byte" Nullable="false" />
+          <Property Name="TrN_FinalnyWegiel" Type="Byte" Nullable="false" />
+          <Property Name="TrN_KorektaZTytulu" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_EdycjaTabelkiVAT" Type="Byte" Nullable="false" />
+          <Property Name="TrN_PlatnikTyp" Type="Int16" />
+          <Property Name="TrN_PlatnikID" Type="Int32" />
+          <Property Name="TrN_PlatnoscNaWZ" Type="Byte" Nullable="false" />
+          <Property Name="TrN_BzpId" Type="Int32" Nullable="false" />
+          <Property Name="TrN_RezerwacjaWew" Type="Byte" Nullable="false" />
+          <Property Name="TrN_PAFACzesciowe" Type="Byte" Nullable="false" />
+          <Property Name="TrN_AktualizacjaCenyZakKor" Type="Byte" Nullable="false" />
+          <Property Name="TrN_StawkaNPOO" Type="Byte" Nullable="false" />
+          <Property Name="TrN_WartoscOO" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_AwizoId" Type="Int32" Nullable="false" />
+          <Property Name="TrN_DokMOSMMId" Type="Int32" Nullable="false" />
+          <Property Name="TrN_ZakID" Type="Int32" />
+          <Property Name="TrN_OpeModKod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_OpeModNazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OpeZalKod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_OpeZalNazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PunktyZam" Type="Int32" Nullable="false" />
+          <Property Name="TrN_PunktyZap" Type="Int32" Nullable="false" />
+          <Property Name="TrN_WartoscZakupu" Type="Decimal" Precision="15" Scale="2" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="TrN_WeryfikacjaVATCzynnyData" Type="DateTime" Precision="3" />
+          <Property Name="TrN_WeryfikacjaVATCzynnyWartosc" Type="Int32" />
+          <Property Name="Trn_Sent" Type="Int32" Nullable="false" />
+          <Property Name="TrN_eSklepZrodlo" Type="Int32" />
+          <Property Name="TrN_eSklepRodzajDokumentu" Type="Byte" />
+          <Property Name="TrN_eSklepFormaPlatnosci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepStatusPlatnosci" Type="Byte" />
+          <Property Name="TrN_eSklepUwagiKlienta" Type="String" MaxLength="2048" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepSposobDostawyTyp" Type="Int16" />
+          <Property Name="TrN_eSklepSposobDostawyNazwa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepStatusDostawy" Type="Int16" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoID" Type="Int32" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoIDeSklep" Type="Int32" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoNazwa1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoNazwa2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoKrajISO" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoWojewodztwo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoUlica" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoNrBudynku" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoNrLokalu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoMiasto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoKodPocztowy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoTelefon" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoGSM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepKodPaczkomatuPodst" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPaczkomatKodPaczki" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPaczkomatPodstMiasto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPaczkomatPodstKodPocztowy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPaczkomatPodstUlica" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPaczkomatPodstUlicaNR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepKodPaczkomatuRezerw" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPaczkomatRezerwMiasto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPaczkomatRezerwKodPocztowy" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPaczkomatRezerwUlica" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPaczkomatRezerwUlicaNR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_OpeZatwID" Type="Int32" />
+          <Property Name="TrN_TS_Zatw" Type="DateTime" Precision="3" />
+          <Property Name="TrN_OpeWydrID" Type="Int32" />
+          <Property Name="TrN_TS_Wydr" Type="DateTime" Precision="3" />
+          <Property Name="TrN_OpeZatwKod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_OpeZatwNazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OpeWydrKod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_OpeWydrNazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_PCID" Type="Int32" />
+          <Property Name="TrN_PCJSID" Type="Int32" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoAPI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoSzerokosc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_eSklepPunktOdbioruOsobistegoDlugosc" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="TrN_DokumentTozsamosci" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_UmowaWegiel" Type="Byte" Nullable="false" />
+          <Property Name="TrN_NrListuPrzewozowegoTypKuriera" Type="Int32" Nullable="false" />
+          <Property Name="TrN_SplitPay" Type="Byte" Nullable="false" />
+          <Property Name="TrN_WartoscSP" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="TrN_eSklepDataDost" Type="DateTime" Precision="3" />
+          <Property Name="TrN_PlatnikRachunekLp" Type="Int32" Nullable="false" />
+          <Property Name="TrN_PlatnikRachunekNr" Type="String" MaxLength="51" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_OpeEMailID" Type="Int32" />
+          <Property Name="TrN_TS_EMail" Type="DateTime" Precision="3" />
+          <Property Name="TrN_OpeEMailKod" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TrN_OpeEMailNazwisko" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TrN_AwfWyslano" Type="DateTime" Precision="3" />
+          <Property Name="TrN_NieNaliczajOplataCukrowa" Type="Byte" Nullable="false" />
+          <Property Name="TrN_RozliczamPodatekWOSS" Type="Byte" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_KntCJB">
+          <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="0..1" />
+          <End Role="Kontrahenci1" Type="Self.Kontrahenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kontrahenci">
+              <PropertyRef Name="Knt_KntId" />
+            </Principal>
+            <Dependent Role="Kontrahenci1">
+              <PropertyRef Name="Knt_CJBId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KntOdbiorca">
+          <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="0..1" />
+          <End Role="Kontrahenci1" Type="Self.Kontrahenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kontrahenci">
+              <PropertyRef Name="Knt_KntId" />
+            </Principal>
+            <Dependent Role="Kontrahenci1">
+              <PropertyRef Name="Knt_OdbiorcaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KntParent">
+          <End Role="Kontrahenci" Type="Self.Kontrahenci" Multiplicity="0..1" />
+          <End Role="Kontrahenci1" Type="Self.Kontrahenci" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kontrahenci">
+              <PropertyRef Name="Knt_KntId" />
+            </Principal>
+            <Dependent Role="Kontrahenci1">
+              <PropertyRef Name="Knt_NadID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CDN_Prezentacja_KHEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Kontrahencis" EntityType="Self.Kontrahenci" />
+          <EntitySet Name="TraNags" EntityType="Self.TraNag" />
+          <AssociationSet Name="FK_KntCJB" Association="Self.FK_KntCJB">
+            <End Role="Kontrahenci" EntitySet="Kontrahencis" />
+            <End Role="Kontrahenci1" EntitySet="Kontrahencis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KntOdbiorca" Association="Self.FK_KntOdbiorca">
+            <End Role="Kontrahenci" EntitySet="Kontrahencis" />
+            <End Role="Kontrahenci1" EntitySet="Kontrahencis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KntParent" Association="Self.FK_KntParent">
+            <End Role="Kontrahenci" EntitySet="Kontrahencis" />
+            <End Role="Kontrahenci1" EntitySet="Kontrahencis" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CDN_Prezentacja_KHModelStoreContainer" CdmEntityContainer="CDN_Prezentacja_KHEntities">
+          <EntitySetMapping Name="Kontrahencis">
+            <EntityTypeMapping TypeName="CDN_Prezentacja_KHModel.Kontrahenci">
+              <MappingFragment StoreEntitySet="Kontrahenci">
+                <ScalarProperty Name="Knt_KntId" ColumnName="Knt_KntId" />
+                <ScalarProperty Name="Knt_PodmiotTyp" ColumnName="Knt_PodmiotTyp" />
+                <ScalarProperty Name="Knt_Kod" ColumnName="Knt_Kod" />
+                <ScalarProperty Name="Knt_GLN" ColumnName="Knt_GLN" />
+                <ScalarProperty Name="Knt_EAN" ColumnName="Knt_EAN" />
+                <ScalarProperty Name="Knt_KodPocztowy" ColumnName="Knt_KodPocztowy" />
+                <ScalarProperty Name="Knt_NipKraj" ColumnName="Knt_NipKraj" />
+                <ScalarProperty Name="Knt_NipE" ColumnName="Knt_NipE" />
+                <ScalarProperty Name="Knt_Nip" ColumnName="Knt_Nip" />
+                <ScalarProperty Name="Knt_Regon" ColumnName="Knt_Regon" />
+                <ScalarProperty Name="Knt_Telefon1" ColumnName="Knt_Telefon1" />
+                <ScalarProperty Name="Knt_Telefon2" ColumnName="Knt_Telefon2" />
+                <ScalarProperty Name="Knt_Fax" ColumnName="Knt_Fax" />
+                <ScalarProperty Name="Knt_URL" ColumnName="Knt_URL" />
+                <ScalarProperty Name="Knt_BNaID" ColumnName="Knt_BNaID" />
+                <ScalarProperty Name="Knt_IBAN" ColumnName="Knt_IBAN" />
+                <ScalarProperty Name="Knt_OsPlec" ColumnName="Knt_OsPlec" />
+                <ScalarProperty Name="Knt_OsKodPocztowy" ColumnName="Knt_OsKodPocztowy" />
+                <ScalarProperty Name="Knt_OsTelefon" ColumnName="Knt_OsTelefon" />
+                <ScalarProperty Name="Knt_OsGSM" ColumnName="Knt_OsGSM" />
+                <ScalarProperty Name="Knt_Informacje" ColumnName="Knt_Informacje" />
+                <ScalarProperty Name="Knt_Upust" ColumnName="Knt_Upust" />
+                <ScalarProperty Name="Knt_LimitFlag" ColumnName="Knt_LimitFlag" />
+                <ScalarProperty Name="Knt_LimitKredytu" ColumnName="Knt_LimitKredytu" />
+                <ScalarProperty Name="Knt_LimitPrzeterKredytFlag" ColumnName="Knt_LimitPrzeterKredytFlag" />
+                <ScalarProperty Name="Knt_LimitPrzeterKredytWartosc" ColumnName="Knt_LimitPrzeterKredytWartosc" />
+                <ScalarProperty Name="Knt_Ceny" ColumnName="Knt_Ceny" />
+                <ScalarProperty Name="Knt_FplID" ColumnName="Knt_FplID" />
+                <ScalarProperty Name="Knt_MaxZwloka" ColumnName="Knt_MaxZwloka" />
+                <ScalarProperty Name="Knt_TerminPlat" ColumnName="Knt_TerminPlat" />
+                <ScalarProperty Name="Knt_Termin" ColumnName="Knt_Termin" />
+                <ScalarProperty Name="Knt_KatID" ColumnName="Knt_KatID" />
+                <ScalarProperty Name="Knt_BlokadaDok" ColumnName="Knt_BlokadaDok" />
+                <ScalarProperty Name="Knt_LimitKredytuWal" ColumnName="Knt_LimitKredytuWal" />
+                <ScalarProperty Name="Knt_LimitKredytuWykorzystany" ColumnName="Knt_LimitKredytuWykorzystany" />
+                <ScalarProperty Name="Knt_NieRozliczac" ColumnName="Knt_NieRozliczac" />
+                <ScalarProperty Name="Knt_PodatekVat" ColumnName="Knt_PodatekVat" />
+                <ScalarProperty Name="Knt_Finalny" ColumnName="Knt_Finalny" />
+                <ScalarProperty Name="Knt_Export" ColumnName="Knt_Export" />
+                <ScalarProperty Name="Knt_Rodzaj" ColumnName="Knt_Rodzaj" />
+                <ScalarProperty Name="Knt_Rodzaj_Dostawca" ColumnName="Knt_Rodzaj_Dostawca" />
+                <ScalarProperty Name="Knt_Rodzaj_Odbiorca" ColumnName="Knt_Rodzaj_Odbiorca" />
+                <ScalarProperty Name="Knt_Rodzaj_Konkurencja" ColumnName="Knt_Rodzaj_Konkurencja" />
+                <ScalarProperty Name="Knt_Rodzaj_Partner" ColumnName="Knt_Rodzaj_Partner" />
+                <ScalarProperty Name="Knt_Rodzaj_Potencjalny" ColumnName="Knt_Rodzaj_Potencjalny" />
+                <ScalarProperty Name="Knt_Medialny" ColumnName="Knt_Medialny" />
+                <ScalarProperty Name="Knt_MalyPod" ColumnName="Knt_MalyPod" />
+                <ScalarProperty Name="Knt_Rolnik" ColumnName="Knt_Rolnik" />
+                <ScalarProperty Name="Knt_Nieaktywny" ColumnName="Knt_Nieaktywny" />
+                <ScalarProperty Name="Knt_Chroniony" ColumnName="Knt_Chroniony" />
+                <ScalarProperty Name="Knt_OdbiorcaId" ColumnName="Knt_OdbiorcaId" />
+                <ScalarProperty Name="Knt_OpiekunTyp" ColumnName="Knt_OpiekunTyp" />
+                <ScalarProperty Name="Knt_OpiekunId" ColumnName="Knt_OpiekunId" />
+                <ScalarProperty Name="Knt_OpiekunKsiegTyp" ColumnName="Knt_OpiekunKsiegTyp" />
+                <ScalarProperty Name="Knt_OpiekunKsiegID" ColumnName="Knt_OpiekunKsiegID" />
+                <ScalarProperty Name="Knt_OpiekunKsiegDomyslny" ColumnName="Knt_OpiekunKsiegDomyslny" />
+                <ScalarProperty Name="Knt_OpiekunPiKTyp" ColumnName="Knt_OpiekunPiKTyp" />
+                <ScalarProperty Name="Knt_OpiekunPiKID" ColumnName="Knt_OpiekunPiKID" />
+                <ScalarProperty Name="Knt_OpiekunPiKDomyslny" ColumnName="Knt_OpiekunPiKDomyslny" />
+                <ScalarProperty Name="Knt_TerminZwrotuKaucji" ColumnName="Knt_TerminZwrotuKaucji" />
+                <ScalarProperty Name="Knt_NaliczajPlatnosc" ColumnName="Knt_NaliczajPlatnosc" />
+                <ScalarProperty Name="Knt_ZakazDokumentowHaMag" ColumnName="Knt_ZakazDokumentowHaMag" />
+                <ScalarProperty Name="Knt_ZgodaNaEFaktury" ColumnName="Knt_ZgodaNaEFaktury" />
+                <ScalarProperty Name="Knt_TypWymiany" ColumnName="Knt_TypWymiany" />
+                <ScalarProperty Name="Knt_UWDId" ColumnName="Knt_UWDId" />
+                <ScalarProperty Name="Knt_TS_Export" ColumnName="Knt_TS_Export" />
+                <ScalarProperty Name="Knt_ImportAppId" ColumnName="Knt_ImportAppId" />
+                <ScalarProperty Name="Knt_ImportRowId" ColumnName="Knt_ImportRowId" />
+                <ScalarProperty Name="Knt_OpeZalID" ColumnName="Knt_OpeZalID" />
+                <ScalarProperty Name="Knt_StaZalId" ColumnName="Knt_StaZalId" />
+                <ScalarProperty Name="Knt_TS_Zal" ColumnName="Knt_TS_Zal" />
+                <ScalarProperty Name="Knt_OpeModID" ColumnName="Knt_OpeModID" />
+                <ScalarProperty Name="Knt_StaModId" ColumnName="Knt_StaModId" />
+                <ScalarProperty Name="Knt_TS_Mod" ColumnName="Knt_TS_Mod" />
+                <ScalarProperty Name="Knt_GIDTyp" ColumnName="Knt_GIDTyp" />
+                <ScalarProperty Name="Knt_GIDFirma" ColumnName="Knt_GIDFirma" />
+                <ScalarProperty Name="Knt_GIDNumer" ColumnName="Knt_GIDNumer" />
+                <ScalarProperty Name="Knt_GIDLp" ColumnName="Knt_GIDLp" />
+                <ScalarProperty Name="Knt_Adres2" ColumnName="Knt_Adres2" />
+                <ScalarProperty Name="Knt_Email" ColumnName="Knt_Email" />
+                <ScalarProperty Name="Knt_Gmina" ColumnName="Knt_Gmina" />
+                <ScalarProperty Name="Knt_Grupa" ColumnName="Knt_Grupa" />
+                <ScalarProperty Name="Knt_KodTransakcji" ColumnName="Knt_KodTransakcji" />
+                <ScalarProperty Name="Knt_KontoDost" ColumnName="Knt_KontoDost" />
+                <ScalarProperty Name="Knt_KontoOdb" ColumnName="Knt_KontoOdb" />
+                <ScalarProperty Name="Knt_Kraj" ColumnName="Knt_Kraj" />
+                <ScalarProperty Name="Knt_KrajISO" ColumnName="Knt_KrajISO" />
+                <ScalarProperty Name="Knt_Miasto" ColumnName="Knt_Miasto" />
+                <ScalarProperty Name="Knt_Nazwa1" ColumnName="Knt_Nazwa1" />
+                <ScalarProperty Name="Knt_Nazwa2" ColumnName="Knt_Nazwa2" />
+                <ScalarProperty Name="Knt_Nazwa3" ColumnName="Knt_Nazwa3" />
+                <ScalarProperty Name="Knt_NrDomu" ColumnName="Knt_NrDomu" />
+                <ScalarProperty Name="Knt_NrLokalu" ColumnName="Knt_NrLokalu" />
+                <ScalarProperty Name="Knt_Opis" ColumnName="Knt_Opis" />
+                <ScalarProperty Name="Knt_OsAdres2" ColumnName="Knt_OsAdres2" />
+                <ScalarProperty Name="Knt_OsEmail" ColumnName="Knt_OsEmail" />
+                <ScalarProperty Name="Knt_OsGmina" ColumnName="Knt_OsGmina" />
+                <ScalarProperty Name="Knt_OsKraj" ColumnName="Knt_OsKraj" />
+                <ScalarProperty Name="Knt_OsMiasto" ColumnName="Knt_OsMiasto" />
+                <ScalarProperty Name="Knt_OsNazwisko" ColumnName="Knt_OsNazwisko" />
+                <ScalarProperty Name="Knt_OsNrDomu" ColumnName="Knt_OsNrDomu" />
+                <ScalarProperty Name="Knt_OsNrLokalu" ColumnName="Knt_OsNrLokalu" />
+                <ScalarProperty Name="Knt_OsPoczta" ColumnName="Knt_OsPoczta" />
+                <ScalarProperty Name="Knt_OsPowiat" ColumnName="Knt_OsPowiat" />
+                <ScalarProperty Name="Knt_OsTytul" ColumnName="Knt_OsTytul" />
+                <ScalarProperty Name="Knt_OsUlica" ColumnName="Knt_OsUlica" />
+                <ScalarProperty Name="Knt_OsWojewodztwo" ColumnName="Knt_OsWojewodztwo" />
+                <ScalarProperty Name="Knt_Pesel" ColumnName="Knt_Pesel" />
+                <ScalarProperty Name="Knt_Poczta" ColumnName="Knt_Poczta" />
+                <ScalarProperty Name="Knt_Powiat" ColumnName="Knt_Powiat" />
+                <ScalarProperty Name="Knt_RachunekNr" ColumnName="Knt_RachunekNr" />
+                <ScalarProperty Name="Knt_Ulica" ColumnName="Knt_Ulica" />
+                <ScalarProperty Name="Knt_UWDEmail" ColumnName="Knt_UWDEmail" />
+                <ScalarProperty Name="Knt_UWDOddzial" ColumnName="Knt_UWDOddzial" />
+                <ScalarProperty Name="Knt_Wojewodztwo" ColumnName="Knt_Wojewodztwo" />
+                <ScalarProperty Name="Knt_Zezwolenie" ColumnName="Knt_Zezwolenie" />
+                <ScalarProperty Name="Knt_KatZakID" ColumnName="Knt_KatZakID" />
+                <ScalarProperty Name="Knt_KorKraj" ColumnName="Knt_KorKraj" />
+                <ScalarProperty Name="Knt_KorMiasto" ColumnName="Knt_KorMiasto" />
+                <ScalarProperty Name="Knt_KorPoczta" ColumnName="Knt_KorPoczta" />
+                <ScalarProperty Name="Knt_KorKodPocztowy" ColumnName="Knt_KorKodPocztowy" />
+                <ScalarProperty Name="Knt_KorUlica" ColumnName="Knt_KorUlica" />
+                <ScalarProperty Name="Knt_KorNrDomu" ColumnName="Knt_KorNrDomu" />
+                <ScalarProperty Name="Knt_KorNrLokalu" ColumnName="Knt_KorNrLokalu" />
+                <ScalarProperty Name="Knt_FCzynnosci" ColumnName="Knt_FCzynnosci" />
+                <ScalarProperty Name="Knt_FCzesci" ColumnName="Knt_FCzesci" />
+                <ScalarProperty Name="Knt_BazaBR_GUID" ColumnName="Knt_BazaBR_GUID" />
+                <ScalarProperty Name="Knt_eSklepID" ColumnName="Knt_eSklepID" />
+                <ScalarProperty Name="Knt_ZwolnionyZAkcyzy" ColumnName="Knt_ZwolnionyZAkcyzy" />
+                <ScalarProperty Name="Knt_PowiazanyUoV" ColumnName="Knt_PowiazanyUoV" />
+                <ScalarProperty Name="Knt_NieNaliczajOdsetek" ColumnName="Knt_NieNaliczajOdsetek" />
+                <ScalarProperty Name="Knt_ESklep" ColumnName="Knt_ESklep" />
+                <ScalarProperty Name="Knt_WindykacjaSchematId" ColumnName="Knt_WindykacjaSchematId" />
+                <ScalarProperty Name="Knt_WindykacjaOsobaId" ColumnName="Knt_WindykacjaOsobaId" />
+                <ScalarProperty Name="Knt_WindykacjaEMail" ColumnName="Knt_WindykacjaEMail" />
+                <ScalarProperty Name="Knt_TelefonSms" ColumnName="Knt_TelefonSms" />
+                <ScalarProperty Name="Knt_WindykacjaTelefonSms" ColumnName="Knt_WindykacjaTelefonSms" />
+                <ScalarProperty Name="Knt_MetodaKasowa" ColumnName="Knt_MetodaKasowa" />
+                <ScalarProperty Name="Knt_FinalnyWegiel" ColumnName="Knt_FinalnyWegiel" />
+                <ScalarProperty Name="Knt_Komornik" ColumnName="Knt_Komornik" />
+                <ScalarProperty Name="Knt_KomornikOkreg" ColumnName="Knt_KomornikOkreg" />
+                <ScalarProperty Name="Knt_KomornikMiasto" ColumnName="Knt_KomornikMiasto" />
+                <ScalarProperty Name="Knt_KomornikRewir" ColumnName="Knt_KomornikRewir" />
+                <ScalarProperty Name="Knt_NadID" ColumnName="Knt_NadID" />
+                <ScalarProperty Name="Knt_Waluta" ColumnName="Knt_Waluta" />
+                <ScalarProperty Name="Knt_Algorytm" ColumnName="Knt_Algorytm" />
+                <ScalarProperty Name="Knt_NieUwzglVATZD" ColumnName="Knt_NieUwzglVATZD" />
+                <ScalarProperty Name="Knt_GlID" ColumnName="Knt_GlID" />
+                <ScalarProperty Name="Knt_LoginComarchCloud" ColumnName="Knt_LoginComarchCloud" />
+                <ScalarProperty Name="Knt_CJBTyp" ColumnName="Knt_CJBTyp" />
+                <ScalarProperty Name="Knt_CJBId" ColumnName="Knt_CJBId" />
+                <ScalarProperty Name="Knt_OpeModKod" ColumnName="Knt_OpeModKod" />
+                <ScalarProperty Name="Knt_OpeModNazwisko" ColumnName="Knt_OpeModNazwisko" />
+                <ScalarProperty Name="Knt_OpeZalKod" ColumnName="Knt_OpeZalKod" />
+                <ScalarProperty Name="Knt_OpeZalNazwisko" ColumnName="Knt_OpeZalNazwisko" />
+                <ScalarProperty Name="Knt_OpiekunDomyslny" ColumnName="Knt_OpiekunDomyslny" />
+                <ScalarProperty Name="Knt_LpAnonimizacji" ColumnName="Knt_LpAnonimizacji" />
+                <ScalarProperty Name="Knt_DataAnonimizacji" ColumnName="Knt_DataAnonimizacji" />
+                <ScalarProperty Name="Knt_SplitPay" ColumnName="Knt_SplitPay" />
+                <ScalarProperty Name="Knt_Domena" ColumnName="Knt_Domena" />
+                <ScalarProperty Name="Knt_DokumentTozsamosci" ColumnName="Knt_DokumentTozsamosci" />
+                <ScalarProperty Name="Knt_UmowaWegiel" ColumnName="Knt_UmowaWegiel" />
+                <ScalarProperty Name="Knt_IdSisc" ColumnName="Knt_IdSisc" />
+                <ScalarProperty Name="Knt_eSklepZrodlo" ColumnName="Knt_eSklepZrodlo" />
+                <ScalarProperty Name="Knt_RachunekNr0" ColumnName="Knt_RachunekNr0" />
+                <ScalarProperty Name="Knt_AwfZgoda" ColumnName="Knt_AwfZgoda" />
+                <ScalarProperty Name="Knt_AwfMonit" ColumnName="Knt_AwfMonit" />
+                <ScalarProperty Name="Knt_NieNaliczajOplataCukrowa" ColumnName="Knt_NieNaliczajOplataCukrowa" />
+                <ScalarProperty Name="Knt_NipPelny" ColumnName="Knt_NipPelny" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TraNags">
+            <EntityTypeMapping TypeName="CDN_Prezentacja_KHModel.TraNag">
+              <MappingFragment StoreEntitySet="TraNag">
+                <ScalarProperty Name="TrN_TrNID" ColumnName="TrN_TrNID" />
+                <ScalarProperty Name="TrN_RelTrNId" ColumnName="TrN_RelTrNId" />
+                <ScalarProperty Name="TrN_FVMarza" ColumnName="TrN_FVMarza" />
+                <ScalarProperty Name="TrN_DDfId" ColumnName="TrN_DDfId" />
+                <ScalarProperty Name="TrN_TypDokumentu" ColumnName="TrN_TypDokumentu" />
+                <ScalarProperty Name="TrN_ZwrId" ColumnName="TrN_ZwrId" />
+                <ScalarProperty Name="TrN_FaId" ColumnName="TrN_FaId" />
+                <ScalarProperty Name="TrN_NumerNr" ColumnName="TrN_NumerNr" />
+                <ScalarProperty Name="TrN_NumerString" ColumnName="TrN_NumerString" />
+                <ScalarProperty Name="TrN_Bufor" ColumnName="TrN_Bufor" />
+                <ScalarProperty Name="TrN_Anulowany" ColumnName="TrN_Anulowany" />
+                <ScalarProperty Name="TrN_VaNId" ColumnName="TrN_VaNId" />
+                <ScalarProperty Name="TrN_DataDok" ColumnName="TrN_DataDok" />
+                <ScalarProperty Name="TrN_DataWys" ColumnName="TrN_DataWys" />
+                <ScalarProperty Name="TrN_DataOpe" ColumnName="TrN_DataOpe" />
+                <ScalarProperty Name="TrN_NumerObcy" ColumnName="TrN_NumerObcy" />
+                <ScalarProperty Name="TrN_DataKur" ColumnName="TrN_DataKur" />
+                <ScalarProperty Name="TrN_NumerPelnyPrw" ColumnName="TrN_NumerPelnyPrw" />
+                <ScalarProperty Name="TrN_TaxFreePotwierdzony" ColumnName="TrN_TaxFreePotwierdzony" />
+                <ScalarProperty Name="TrN_Korekta" ColumnName="TrN_Korekta" />
+                <ScalarProperty Name="TrN_Fiskalna" ColumnName="TrN_Fiskalna" />
+                <ScalarProperty Name="TrN_FiskalnaErr" ColumnName="TrN_FiskalnaErr" />
+                <ScalarProperty Name="TrN_StatusInt" ColumnName="TrN_StatusInt" />
+                <ScalarProperty Name="TrN_RabatPromocyjny" ColumnName="TrN_RabatPromocyjny" />
+                <ScalarProperty Name="TrN_RabatKorekta" ColumnName="TrN_RabatKorekta" />
+                <ScalarProperty Name="TrN_Detal" ColumnName="TrN_Detal" />
+                <ScalarProperty Name="TrN_Rodzaj" ColumnName="TrN_Rodzaj" />
+                <ScalarProperty Name="TrN_PodmiotTyp" ColumnName="TrN_PodmiotTyp" />
+                <ScalarProperty Name="TrN_PodID" ColumnName="TrN_PodID" />
+                <ScalarProperty Name="TrN_PodKodPocztowy" ColumnName="TrN_PodKodPocztowy" />
+                <ScalarProperty Name="TrN_PodNipKraj" ColumnName="TrN_PodNipKraj" />
+                <ScalarProperty Name="TrN_PodNipE" ColumnName="TrN_PodNipE" />
+                <ScalarProperty Name="TrN_PodmiotGLN" ColumnName="TrN_PodmiotGLN" />
+                <ScalarProperty Name="TrN_Finalny" ColumnName="TrN_Finalny" />
+                <ScalarProperty Name="TrN_Export" ColumnName="TrN_Export" />
+                <ScalarProperty Name="TrN_OdbiorcaTyp" ColumnName="TrN_OdbiorcaTyp" />
+                <ScalarProperty Name="TrN_OdbID" ColumnName="TrN_OdbID" />
+                <ScalarProperty Name="TrN_OdbKodPocztowy" ColumnName="TrN_OdbKodPocztowy" />
+                <ScalarProperty Name="TrN_OdbNipKraj" ColumnName="TrN_OdbNipKraj" />
+                <ScalarProperty Name="TrN_OdbNipE" ColumnName="TrN_OdbNipE" />
+                <ScalarProperty Name="TrN_OdbiorcaGLN" ColumnName="TrN_OdbiorcaGLN" />
+                <ScalarProperty Name="TrN_OdbiorcaDocTyp" ColumnName="TrN_OdbiorcaDocTyp" />
+                <ScalarProperty Name="TrN_OdbDocID" ColumnName="TrN_OdbDocID" />
+                <ScalarProperty Name="TrN_OdbTelefon" ColumnName="TrN_OdbTelefon" />
+                <ScalarProperty Name="TrN_KatID" ColumnName="TrN_KatID" />
+                <ScalarProperty Name="TrN_Kategoria" ColumnName="TrN_Kategoria" />
+                <ScalarProperty Name="TrN_FPlId" ColumnName="TrN_FPlId" />
+                <ScalarProperty Name="TrN_Termin" ColumnName="TrN_Termin" />
+                <ScalarProperty Name="TrN_TerminZwrotuKaucji" ColumnName="TrN_TerminZwrotuKaucji" />
+                <ScalarProperty Name="TrN_RazemNetto" ColumnName="TrN_RazemNetto" />
+                <ScalarProperty Name="TrN_RazemVAT" ColumnName="TrN_RazemVAT" />
+                <ScalarProperty Name="TrN_RazemBrutto" ColumnName="TrN_RazemBrutto" />
+                <ScalarProperty Name="TrN_RazemNettoWal" ColumnName="TrN_RazemNettoWal" />
+                <ScalarProperty Name="TrN_RazemVATWal" ColumnName="TrN_RazemVATWal" />
+                <ScalarProperty Name="TrN_RazemBruttoWal" ColumnName="TrN_RazemBruttoWal" />
+                <ScalarProperty Name="TrN_Waluta" ColumnName="TrN_Waluta" />
+                <ScalarProperty Name="TrN_KursNumer" ColumnName="TrN_KursNumer" />
+                <ScalarProperty Name="TrN_KursL" ColumnName="TrN_KursL" />
+                <ScalarProperty Name="TrN_KursM" ColumnName="TrN_KursM" />
+                <ScalarProperty Name="TrN_PlatElemWalSys" ColumnName="TrN_PlatElemWalSys" />
+                <ScalarProperty Name="TrN_VatDlaDokWal" ColumnName="TrN_VatDlaDokWal" />
+                <ScalarProperty Name="TrN_PlatKaucje" ColumnName="TrN_PlatKaucje" />
+                <ScalarProperty Name="TrN_PodmiotZalTyp" ColumnName="TrN_PodmiotZalTyp" />
+                <ScalarProperty Name="TrN_PodZalId" ColumnName="TrN_PodZalId" />
+                <ScalarProperty Name="TrN_BlokadaPlatnosci" ColumnName="TrN_BlokadaPlatnosci" />
+                <ScalarProperty Name="TrN_MagZrdId" ColumnName="TrN_MagZrdId" />
+                <ScalarProperty Name="TrN_MagDocId" ColumnName="TrN_MagDocId" />
+                <ScalarProperty Name="TrN_TypNB" ColumnName="TrN_TypNB" />
+                <ScalarProperty Name="TrN_Rabat" ColumnName="TrN_Rabat" />
+                <ScalarProperty Name="TrN_ZwroconoCalaIlosc" ColumnName="TrN_ZwroconoCalaIlosc" />
+                <ScalarProperty Name="TrN_TrSTyp" ColumnName="TrN_TrSTyp" />
+                <ScalarProperty Name="TrN_DekId" ColumnName="TrN_DekId" />
+                <ScalarProperty Name="TrN_TS_Export" ColumnName="TrN_TS_Export" />
+                <ScalarProperty Name="TrN_ImportAppId" ColumnName="TrN_ImportAppId" />
+                <ScalarProperty Name="TrN_ImportRowId" ColumnName="TrN_ImportRowId" />
+                <ScalarProperty Name="TrN_OpeZalID" ColumnName="TrN_OpeZalID" />
+                <ScalarProperty Name="TrN_StaZalId" ColumnName="TrN_StaZalId" />
+                <ScalarProperty Name="TrN_TS_Zal" ColumnName="TrN_TS_Zal" />
+                <ScalarProperty Name="TrN_OpeModID" ColumnName="TrN_OpeModID" />
+                <ScalarProperty Name="TrN_StaModId" ColumnName="TrN_StaModId" />
+                <ScalarProperty Name="TrN_TS_Mod" ColumnName="TrN_TS_Mod" />
+                <ScalarProperty Name="TrN_GIDTyp" ColumnName="TrN_GIDTyp" />
+                <ScalarProperty Name="TrN_GIDFirma" ColumnName="TrN_GIDFirma" />
+                <ScalarProperty Name="TrN_GIDNumer" ColumnName="TrN_GIDNumer" />
+                <ScalarProperty Name="TrN_GIDLp" ColumnName="TrN_GIDLp" />
+                <ScalarProperty Name="TrN_OFFPrawoDoFAPA" ColumnName="TrN_OFFPrawoDoFAPA" />
+                <ScalarProperty Name="TrN_OFFPrawoDoAnulowania" ColumnName="TrN_OFFPrawoDoAnulowania" />
+                <ScalarProperty Name="TrN_OFFExportMag" ColumnName="TrN_OFFExportMag" />
+                <ScalarProperty Name="TrN_Centrala" ColumnName="TrN_Centrala" />
+                <ScalarProperty Name="TrN_IsNId" ColumnName="TrN_IsNId" />
+                <ScalarProperty Name="TrN_DataTransportu" ColumnName="TrN_DataTransportu" />
+                <ScalarProperty Name="TrN_DabId" ColumnName="TrN_DabId" />
+                <ScalarProperty Name="TrN_DataEFaktura" ColumnName="TrN_DataEFaktura" />
+                <ScalarProperty Name="TrN_EFakturaGUID" ColumnName="TrN_EFakturaGUID" />
+                <ScalarProperty Name="TrN_DataPtwTaxFree" ColumnName="TrN_DataPtwTaxFree" />
+                <ScalarProperty Name="TrN_KodKraju" ColumnName="TrN_KodKraju" />
+                <ScalarProperty Name="TrN_KodTransakcji" ColumnName="TrN_KodTransakcji" />
+                <ScalarProperty Name="TrN_NotaKorPo" ColumnName="TrN_NotaKorPo" />
+                <ScalarProperty Name="TrN_NotaKorPrzed" ColumnName="TrN_NotaKorPrzed" />
+                <ScalarProperty Name="TrN_OdbAdres2" ColumnName="TrN_OdbAdres2" />
+                <ScalarProperty Name="TrN_OdbEmail" ColumnName="TrN_OdbEmail" />
+                <ScalarProperty Name="TrN_OdbGmina" ColumnName="TrN_OdbGmina" />
+                <ScalarProperty Name="TrN_OdbKraj" ColumnName="TrN_OdbKraj" />
+                <ScalarProperty Name="TrN_OdbMiasto" ColumnName="TrN_OdbMiasto" />
+                <ScalarProperty Name="TrN_OdbNazwa1" ColumnName="TrN_OdbNazwa1" />
+                <ScalarProperty Name="TrN_OdbNazwa2" ColumnName="TrN_OdbNazwa2" />
+                <ScalarProperty Name="TrN_OdbNazwa3" ColumnName="TrN_OdbNazwa3" />
+                <ScalarProperty Name="TrN_OdbNrDomu" ColumnName="TrN_OdbNrDomu" />
+                <ScalarProperty Name="TrN_OdbNrLokalu" ColumnName="TrN_OdbNrLokalu" />
+                <ScalarProperty Name="TrN_OdbPoczta" ColumnName="TrN_OdbPoczta" />
+                <ScalarProperty Name="TrN_OdbPowiat" ColumnName="TrN_OdbPowiat" />
+                <ScalarProperty Name="TrN_OdbUlica" ColumnName="TrN_OdbUlica" />
+                <ScalarProperty Name="TrN_OdbWojewodztwo" ColumnName="TrN_OdbWojewodztwo" />
+                <ScalarProperty Name="TrN_Odebral" ColumnName="TrN_Odebral" />
+                <ScalarProperty Name="TrN_OpeWysylajacy" ColumnName="TrN_OpeWysylajacy" />
+                <ScalarProperty Name="TrN_Opis" ColumnName="TrN_Opis" />
+                <ScalarProperty Name="TrN_PodAdres2" ColumnName="TrN_PodAdres2" />
+                <ScalarProperty Name="TrN_PodGmina" ColumnName="TrN_PodGmina" />
+                <ScalarProperty Name="TrN_PodKraj" ColumnName="TrN_PodKraj" />
+                <ScalarProperty Name="TrN_PodMiasto" ColumnName="TrN_PodMiasto" />
+                <ScalarProperty Name="TrN_PodNazwa1" ColumnName="TrN_PodNazwa1" />
+                <ScalarProperty Name="TrN_PodNazwa2" ColumnName="TrN_PodNazwa2" />
+                <ScalarProperty Name="TrN_PodNazwa3" ColumnName="TrN_PodNazwa3" />
+                <ScalarProperty Name="TrN_PodNrDomu" ColumnName="TrN_PodNrDomu" />
+                <ScalarProperty Name="TrN_PodNrLokalu" ColumnName="TrN_PodNrLokalu" />
+                <ScalarProperty Name="TrN_PodPoczta" ColumnName="TrN_PodPoczta" />
+                <ScalarProperty Name="TrN_PodPowiat" ColumnName="TrN_PodPowiat" />
+                <ScalarProperty Name="TrN_PodUlica" ColumnName="TrN_PodUlica" />
+                <ScalarProperty Name="TrN_PodWojewodztwo" ColumnName="TrN_PodWojewodztwo" />
+                <ScalarProperty Name="TrN_NumerPelny" ColumnName="TrN_NumerPelny" />
+                <ScalarProperty Name="TrN_StatusString" ColumnName="TrN_StatusString" />
+                <ScalarProperty Name="TrN_PreDekID" ColumnName="TrN_PreDekID" />
+                <ScalarProperty Name="TrN_ZwrIdWZKK" ColumnName="TrN_ZwrIdWZKK" />
+                <ScalarProperty Name="TrN_TrybNettoVAT" ColumnName="TrN_TrybNettoVAT" />
+                <ScalarProperty Name="TrN_eSklepID" ColumnName="TrN_eSklepID" />
+                <ScalarProperty Name="TrN_NieOkreslonaWartoscKor" ColumnName="TrN_NieOkreslonaWartoscKor" />
+                <ScalarProperty Name="TrN_ZwolnionyZAkcyzy" ColumnName="TrN_ZwolnionyZAkcyzy" />
+                <ScalarProperty Name="TrN_AkcyzaMiejsceOdbioru" ColumnName="TrN_AkcyzaMiejsceOdbioru" />
+                <ScalarProperty Name="TrN_AkcyzaMiejsceWydania" ColumnName="TrN_AkcyzaMiejsceWydania" />
+                <ScalarProperty Name="TrN_AkcyzaDataRozpoczeciaPrzem" ColumnName="TrN_AkcyzaDataRozpoczeciaPrzem" />
+                <ScalarProperty Name="TrN_AkcyzaDataOdbioruOd" ColumnName="TrN_AkcyzaDataOdbioruOd" />
+                <ScalarProperty Name="TrN_AkcyzaDataOdbioruDo" ColumnName="TrN_AkcyzaDataOdbioruDo" />
+                <ScalarProperty Name="TrN_FADokumentDostawy" ColumnName="TrN_FADokumentDostawy" />
+                <ScalarProperty Name="TrN_NrListuPrzewozowego" ColumnName="TrN_NrListuPrzewozowego" />
+                <ScalarProperty Name="TrN_Srw" ColumnName="TrN_Srw" />
+                <ScalarProperty Name="TrN_PodatekVat" ColumnName="TrN_PodatekVat" />
+                <ScalarProperty Name="TrN_Pesel" ColumnName="TrN_Pesel" />
+                <ScalarProperty Name="TrN_FVMarzaRodzaj" ColumnName="TrN_FVMarzaRodzaj" />
+                <ScalarProperty Name="TrN_RabatWartosc" ColumnName="TrN_RabatWartosc" />
+                <ScalarProperty Name="TrN_PARodzajKor" ColumnName="TrN_PARodzajKor" />
+                <ScalarProperty Name="TrN_MetodaKasowa" ColumnName="TrN_MetodaKasowa" />
+                <ScalarProperty Name="TrN_FinalnyWegiel" ColumnName="TrN_FinalnyWegiel" />
+                <ScalarProperty Name="TrN_KorektaZTytulu" ColumnName="TrN_KorektaZTytulu" />
+                <ScalarProperty Name="TrN_EdycjaTabelkiVAT" ColumnName="TrN_EdycjaTabelkiVAT" />
+                <ScalarProperty Name="TrN_PlatnikTyp" ColumnName="TrN_PlatnikTyp" />
+                <ScalarProperty Name="TrN_PlatnikID" ColumnName="TrN_PlatnikID" />
+                <ScalarProperty Name="TrN_PlatnoscNaWZ" ColumnName="TrN_PlatnoscNaWZ" />
+                <ScalarProperty Name="TrN_BzpId" ColumnName="TrN_BzpId" />
+                <ScalarProperty Name="TrN_RezerwacjaWew" ColumnName="TrN_RezerwacjaWew" />
+                <ScalarProperty Name="TrN_PAFACzesciowe" ColumnName="TrN_PAFACzesciowe" />
+                <ScalarProperty Name="TrN_AktualizacjaCenyZakKor" ColumnName="TrN_AktualizacjaCenyZakKor" />
+                <ScalarProperty Name="TrN_StawkaNPOO" ColumnName="TrN_StawkaNPOO" />
+                <ScalarProperty Name="TrN_WartoscOO" ColumnName="TrN_WartoscOO" />
+                <ScalarProperty Name="TrN_AwizoId" ColumnName="TrN_AwizoId" />
+                <ScalarProperty Name="TrN_DokMOSMMId" ColumnName="TrN_DokMOSMMId" />
+                <ScalarProperty Name="TrN_ZakID" ColumnName="TrN_ZakID" />
+                <ScalarProperty Name="TrN_OpeModKod" ColumnName="TrN_OpeModKod" />
+                <ScalarProperty Name="TrN_OpeModNazwisko" ColumnName="TrN_OpeModNazwisko" />
+                <ScalarProperty Name="TrN_OpeZalKod" ColumnName="TrN_OpeZalKod" />
+                <ScalarProperty Name="TrN_OpeZalNazwisko" ColumnName="TrN_OpeZalNazwisko" />
+                <ScalarProperty Name="TrN_PunktyZam" ColumnName="TrN_PunktyZam" />
+                <ScalarProperty Name="TrN_PunktyZap" ColumnName="TrN_PunktyZap" />
+                <ScalarProperty Name="TrN_WartoscZakupu" ColumnName="TrN_WartoscZakupu" />
+                <ScalarProperty Name="TrN_WeryfikacjaVATCzynnyData" ColumnName="TrN_WeryfikacjaVATCzynnyData" />
+                <ScalarProperty Name="TrN_WeryfikacjaVATCzynnyWartosc" ColumnName="TrN_WeryfikacjaVATCzynnyWartosc" />
+                <ScalarProperty Name="Trn_Sent" ColumnName="Trn_Sent" />
+                <ScalarProperty Name="TrN_eSklepZrodlo" ColumnName="TrN_eSklepZrodlo" />
+                <ScalarProperty Name="TrN_eSklepRodzajDokumentu" ColumnName="TrN_eSklepRodzajDokumentu" />
+                <ScalarProperty Name="TrN_eSklepFormaPlatnosci" ColumnName="TrN_eSklepFormaPlatnosci" />
+                <ScalarProperty Name="TrN_eSklepStatusPlatnosci" ColumnName="TrN_eSklepStatusPlatnosci" />
+                <ScalarProperty Name="TrN_eSklepUwagiKlienta" ColumnName="TrN_eSklepUwagiKlienta" />
+                <ScalarProperty Name="TrN_eSklepSposobDostawyTyp" ColumnName="TrN_eSklepSposobDostawyTyp" />
+                <ScalarProperty Name="TrN_eSklepSposobDostawyNazwa" ColumnName="TrN_eSklepSposobDostawyNazwa" />
+                <ScalarProperty Name="TrN_eSklepStatusDostawy" ColumnName="TrN_eSklepStatusDostawy" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoID" ColumnName="TrN_eSklepPunktOdbioruOsobistegoID" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoIDeSklep" ColumnName="TrN_eSklepPunktOdbioruOsobistegoIDeSklep" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoNazwa1" ColumnName="TrN_eSklepPunktOdbioruOsobistegoNazwa1" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoNazwa2" ColumnName="TrN_eSklepPunktOdbioruOsobistegoNazwa2" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoKrajISO" ColumnName="TrN_eSklepPunktOdbioruOsobistegoKrajISO" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoWojewodztwo" ColumnName="TrN_eSklepPunktOdbioruOsobistegoWojewodztwo" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoUlica" ColumnName="TrN_eSklepPunktOdbioruOsobistegoUlica" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoNrBudynku" ColumnName="TrN_eSklepPunktOdbioruOsobistegoNrBudynku" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoNrLokalu" ColumnName="TrN_eSklepPunktOdbioruOsobistegoNrLokalu" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoMiasto" ColumnName="TrN_eSklepPunktOdbioruOsobistegoMiasto" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoKodPocztowy" ColumnName="TrN_eSklepPunktOdbioruOsobistegoKodPocztowy" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoTelefon" ColumnName="TrN_eSklepPunktOdbioruOsobistegoTelefon" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoGSM" ColumnName="TrN_eSklepPunktOdbioruOsobistegoGSM" />
+                <ScalarProperty Name="TrN_eSklepKodPaczkomatuPodst" ColumnName="TrN_eSklepKodPaczkomatuPodst" />
+                <ScalarProperty Name="TrN_eSklepPaczkomatKodPaczki" ColumnName="TrN_eSklepPaczkomatKodPaczki" />
+                <ScalarProperty Name="TrN_eSklepPaczkomatPodstMiasto" ColumnName="TrN_eSklepPaczkomatPodstMiasto" />
+                <ScalarProperty Name="TrN_eSklepPaczkomatPodstKodPocztowy" ColumnName="TrN_eSklepPaczkomatPodstKodPocztowy" />
+                <ScalarProperty Name="TrN_eSklepPaczkomatPodstUlica" ColumnName="TrN_eSklepPaczkomatPodstUlica" />
+                <ScalarProperty Name="TrN_eSklepPaczkomatPodstUlicaNR" ColumnName="TrN_eSklepPaczkomatPodstUlicaNR" />
+                <ScalarProperty Name="TrN_eSklepKodPaczkomatuRezerw" ColumnName="TrN_eSklepKodPaczkomatuRezerw" />
+                <ScalarProperty Name="TrN_eSklepPaczkomatRezerwMiasto" ColumnName="TrN_eSklepPaczkomatRezerwMiasto" />
+                <ScalarProperty Name="TrN_eSklepPaczkomatRezerwKodPocztowy" ColumnName="TrN_eSklepPaczkomatRezerwKodPocztowy" />
+                <ScalarProperty Name="TrN_eSklepPaczkomatRezerwUlica" ColumnName="TrN_eSklepPaczkomatRezerwUlica" />
+                <ScalarProperty Name="TrN_eSklepPaczkomatRezerwUlicaNR" ColumnName="TrN_eSklepPaczkomatRezerwUlicaNR" />
+                <ScalarProperty Name="TrN_OpeZatwID" ColumnName="TrN_OpeZatwID" />
+                <ScalarProperty Name="TrN_TS_Zatw" ColumnName="TrN_TS_Zatw" />
+                <ScalarProperty Name="TrN_OpeWydrID" ColumnName="TrN_OpeWydrID" />
+                <ScalarProperty Name="TrN_TS_Wydr" ColumnName="TrN_TS_Wydr" />
+                <ScalarProperty Name="TrN_OpeZatwKod" ColumnName="TrN_OpeZatwKod" />
+                <ScalarProperty Name="TrN_OpeZatwNazwisko" ColumnName="TrN_OpeZatwNazwisko" />
+                <ScalarProperty Name="TrN_OpeWydrKod" ColumnName="TrN_OpeWydrKod" />
+                <ScalarProperty Name="TrN_OpeWydrNazwisko" ColumnName="TrN_OpeWydrNazwisko" />
+                <ScalarProperty Name="TrN_PCID" ColumnName="TrN_PCID" />
+                <ScalarProperty Name="TrN_PCJSID" ColumnName="TrN_PCJSID" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoEmail" ColumnName="TrN_eSklepPunktOdbioruOsobistegoEmail" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoAPI" ColumnName="TrN_eSklepPunktOdbioruOsobistegoAPI" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoSzerokosc" ColumnName="TrN_eSklepPunktOdbioruOsobistegoSzerokosc" />
+                <ScalarProperty Name="TrN_eSklepPunktOdbioruOsobistegoDlugosc" ColumnName="TrN_eSklepPunktOdbioruOsobistegoDlugosc" />
+                <ScalarProperty Name="TrN_DokumentTozsamosci" ColumnName="TrN_DokumentTozsamosci" />
+                <ScalarProperty Name="TrN_UmowaWegiel" ColumnName="TrN_UmowaWegiel" />
+                <ScalarProperty Name="TrN_NrListuPrzewozowegoTypKuriera" ColumnName="TrN_NrListuPrzewozowegoTypKuriera" />
+                <ScalarProperty Name="TrN_SplitPay" ColumnName="TrN_SplitPay" />
+                <ScalarProperty Name="TrN_WartoscSP" ColumnName="TrN_WartoscSP" />
+                <ScalarProperty Name="TrN_eSklepDataDost" ColumnName="TrN_eSklepDataDost" />
+                <ScalarProperty Name="TrN_PlatnikRachunekLp" ColumnName="TrN_PlatnikRachunekLp" />
+                <ScalarProperty Name="TrN_PlatnikRachunekNr" ColumnName="TrN_PlatnikRachunekNr" />
+                <ScalarProperty Name="TrN_OpeEMailID" ColumnName="TrN_OpeEMailID" />
+                <ScalarProperty Name="TrN_TS_EMail" ColumnName="TrN_TS_EMail" />
+                <ScalarProperty Name="TrN_OpeEMailKod" ColumnName="TrN_OpeEMailKod" />
+                <ScalarProperty Name="TrN_OpeEMailNazwisko" ColumnName="TrN_OpeEMailNazwisko" />
+                <ScalarProperty Name="TrN_AwfWyslano" ColumnName="TrN_AwfWyslano" />
+                <ScalarProperty Name="TrN_NieNaliczajOplataCukrowa" ColumnName="TrN_NieNaliczajOplataCukrowa" />
+                <ScalarProperty Name="TrN_RozliczamPodatekWOSS" ColumnName="TrN_RozliczamPodatekWOSS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
